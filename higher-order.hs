@@ -121,4 +121,6 @@ lastf = foldr1 (\ _ acc -> acc)
 lastf' :: [a] -> a
 lastf' = foldl1 (\ _ x -> x)
 
--- Next: function application
+{-- function application --}
+oddSquareSum :: Integer
+oddSquareSum = sum . takeWhile (<10000) . filter odd . map (^2) $ [1..]
